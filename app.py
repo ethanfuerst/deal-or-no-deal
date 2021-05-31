@@ -97,7 +97,7 @@ class DealOrNoDeal():
         self.offers.append(offer)
 
         print(f'The dealers offer is: ${offer}')
-        deal = input('Deal (Y) or No Deal (N)?')
+        deal = input('Deal (Y) or No Deal (N)? ')
 
         if deal.upper() == 'Y':
             return True
@@ -121,7 +121,7 @@ class DealOrNoDeal():
         '''facilitates final choice at end of game'''
 
         self.print_cases()
-        decision = input('Do you want your original case (Y) or the last case left (N)?')
+        decision = input('Do you want your original case (Y) or the last case left (N)? ')
 
         if decision == 'Y':
             return self.__choice_case
