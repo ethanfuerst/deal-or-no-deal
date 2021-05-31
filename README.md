@@ -1,6 +1,7 @@
 # deal-or-no-deal
 
-Text-based Deal or No Deal game
+Text-based Deal or No Deal game.
+If you want to add something, feel free to make a pull request!
 
 ## Files in this repository
 
