@@ -79,13 +79,11 @@ class DealOrNoDeal():
         num = input('Choose a case number: ')
         try:
             num = int(num)
+            if num not in [i.num for i in self.cases if i.available]:
+                print("That case isn't available. I'll choose one at random for you")
+                num = random.choice([i.num for i in self.cases if i.available])
         except ValueError:
-            print("I don't recognize that number! I'll choose a case for you")
-            num = random.choice([i.num for i in self.cases if i.available])
-
-        # must be between 1 - 26 and in cases list
-        if num not in [i.num for i in self.cases if i.available] or num < 1 or num > 26:
-            print("That case isn't available. I'll choose one at random for you")
+            print("I don't recognize that number! I'll choose a random case for you")
             num = random.choice([i.num for i in self.cases if i.available])
         
         return num - 1
